@@ -1,4 +1,4 @@
-# Modularity::Rails [![Build Status](https://secure.travis-ci.org/kevgo/modularity-rails.png)](http://travis-ci.org/#!/kevgo/modularity-rails)
+# Modularity::Rails [![Build Status](https://secure.travis-ci.org/kevgo/modularity-rails.png)](http://travis-ci.org/#!/kevgo/modularity-rails) <a href="https://codeclimate.com/github/kevgo/modularity-rails" target="_blank"><img src="https://codeclimate.com/badge.png" /></a>
 
 Makes the [Modularity CoffeeScript](http://github.com/kevgo/modularity-coffeescript) library and related modules available to
 Rails 3.1 applications.
