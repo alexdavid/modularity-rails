@@ -69,7 +69,7 @@ describe 'ajax_loader', ->
           jquery_callback('result')
 
         it 'calls the given callbacks with the server data', ->
-          spy.should.have.been.calledWith 'result'
+          expect(spy.calledWith('result')).to.be.true
 
         it 'replaces the cache callbacks with returned data', ->
           ajax_loader.cache.get(url).should.equal 'result'
@@ -82,7 +82,7 @@ describe 'ajax_loader', ->
           ajax_loader.get(url, spy)
 
           spy.should.have.been.called
-          spy.should.have.been.calledWith "my data"
+          expect(spy.calledWith('my data')).to.be.true
 
 
     describe 'with caching disabled', ->
@@ -129,7 +129,7 @@ describe 'ajax_loader', ->
           jquery_callback('result')
 
         it 'calls the given callbacks with the server data', ->
-          spy.should.have.been.calledWith 'result'
+          expect(spy.calledWith "result").to.be.true
 
         it 'replaces the cache callbacks with returned data', ->
           expect(ajax_loader.cache.get(url)).to.be.undefined

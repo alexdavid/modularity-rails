@@ -48,23 +48,23 @@ describe 'modularity', ->
 
     it 'shows an alert with the given message if the given condition is false', ->
       modularity.assert false, 'Message'
-      window.alert.should.have.been.calledWith "Message"
+      expect(window.alert.calledWith "Message").to.be.true
 
     it 'fails when the condition is null', ->
       modularity.assert null, 'Message'
-      window.alert.should.have.been.calledWith "Message"
+      expect(window.alert.calledWith "Message").to.be.true
 
     it 'fails when the condition is undefined', ->
       modularity.assert undefined, 'Message'
-      window.alert.should.have.been.calledWith "Message"
+      expect(window.alert.calledWith "Message").to.be.true
 
     it 'fails when the condition is an empty array', ->
       modularity.assert [], 'Message'
-      window.alert.should.have.been.calledWith "Message"
+      expect(window.alert.calledWith "Message").to.be.true
 
     it 'fails when the condition is an empty string', ->
       modularity.assert '', 'Message'
-      window.alert.should.have.been.calledWith "Message"
+      expect(window.alert.calledWith "Message").to.be.true
 
     it 'passes when the condition is a string', ->
       modularity.assert '123', 'Message'
@@ -299,7 +299,7 @@ describe 'modularity', ->
       sinon.spy myMixin, 'method1'
       instance = new Test('testing')
       instance.method1("arg1", "arg2")
-      myMixin.method1.should.have.been.calledWith("arg1", "arg2")
+      expect(myMixin.method1.calledWith("arg1", "arg2")).to.be.true
       myMixin.method1.restore()
 
 
