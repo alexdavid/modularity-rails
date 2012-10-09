@@ -64,6 +64,10 @@ class window.modularity.Module
         mixin_data.mixin?.constructor?.apply(@, arguments)
 
 
+  # @$ jQuery selector shortcut
+  $: (selector) -> jQuery(selector, @container)
+
+
   # MODULE EVENTS.
 
   # Calls the given function when this widget fires the given local event.

@@ -77,6 +77,14 @@ describe 'modularity', ->
       modularity.assert('123').should.be.true
 
 
+  describe '@$ notation', ->
+
+    it 'returns a new jQuery object relative to container', ->
+      module = new TestModule $ '#module_container'
+      insideObject = module.$ '.inside_module,.outside_module'
+      insideObject.length.should.equal 1
+
+
   describe 'jQuery Integration', ->
 
     it 'works', ->
