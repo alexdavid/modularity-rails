@@ -54,7 +54,7 @@ class window.modularity.Module
     # Attach mixins.
     if @mixins?
       for mixin_data in @mixins
-        
+
         # Attach all properties from mixin to the prototype.
         for methodName, method of mixin_data.mixin
           do (methodName, method) => unless @[methodName]
