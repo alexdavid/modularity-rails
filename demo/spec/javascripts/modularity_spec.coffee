@@ -83,6 +83,7 @@ describe 'modularity', ->
       module = new TestModule $ '#module_container'
       insideObject = module.$ '.inside_module,.outside_module'
       insideObject.length.should.equal 1
+      insideObject.hasClass('inside_module').should.be.true
 
 
   describe 'jQuery Integration', ->
